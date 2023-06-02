@@ -1,0 +1,131 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\QuanLyHocSinh\\QuanLyHocSinh.csproj": {}
+  },
+  "projects": {
+    "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\BUS\\BUS.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\BUS\\BUS.csproj",
+        "projectName": "BUS",
+        "projectPath": "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\BUS\\BUS.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\DAO\\DAO.csproj": {
+                "projectPath": "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\DAO\\DAO.csproj"
+              },
+              "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\DTO\\DTO.csproj": {
+                "projectPath": "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\DTO\\DTO.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\DAO\\DAO.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\DAO\\DAO.csproj",
+        "projectName": "DAO",
+        "projectPath": "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\DAO\\DAO.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\DTO\\DTO.csproj": {
+                "projectPath": "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\DTO\\DTO.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\DTO\\DTO.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\DTO\\DTO.csproj",
+        "projectName": "DTO",
+        "projectPath": "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\DTO\\DTO.csproj",
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
+    "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\QuanLyHocSinh\\QuanLyHocSinh.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\QuanLyHocSinh\\QuanLyHocSinh.csproj",
+        "projectName": "QuanLyHocSinh",
+        "projectPath": "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\QuanLyHocSinh\\QuanLyHocSinh.csproj",
+        "packagesPath": "C:\\Users\\LG\\.nuget\\packages\\",
+        "outputPath": "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\QuanLyHocSinh\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\LG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {
+              "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\BUS\\BUS.csproj": {
+                "projectPath": "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\BUS\\BUS.csproj"
+              },
+              "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\DTO\\DTO.csproj": {
+                "projectPath": "D:\\Bao CAo\\quan-ly-hoc-sinh-main\\DTO\\DTO.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Microsoft.ReportingServices.ReportViewerControl.Winforms": {
+              "target": "Package",
+              "version": "[150.1427.0, )"
+            },
+            "Microsoft.SqlServer.Types": {
+              "target": "Package",
+              "version": "[14.0.1016.290, )"
+            },
+            "squirrel.windows": {
+              "target": "Package",
+              "version": "[2.0.1, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}
