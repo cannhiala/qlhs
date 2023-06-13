@@ -36,7 +36,7 @@
             this.btnPhanCong = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBar1 = new DevComponents.DotNetBar.RibbonBar();
             this.btnKhenThuong = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnKyLuat = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBarHocSinh = new DevComponents.DotNetBar.RibbonBar();
             this.btnHocSinh = new DevComponents.DotNetBar.ButtonItem();
             this.btnPhanLop = new DevComponents.DotNetBar.ButtonItem();
@@ -47,7 +47,6 @@
             this.ribbonBarKetQua = new DevComponents.DotNetBar.RibbonBar();
             this.btnKetQua = new DevComponents.DotNetBar.ButtonItem();
             this.btnHocLuc = new DevComponents.DotNetBar.ButtonItem();
-            this.btnHanhKiem = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonBarMonHoc = new DevComponents.DotNetBar.RibbonBar();
             this.btnMonHoc = new DevComponents.DotNetBar.ButtonItem();
             this.btnDiem = new DevComponents.DotNetBar.ButtonItem();
@@ -180,7 +179,7 @@
             this.ribbonBarGiaoVien.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnGiaoVien,
             this.btnPhanCong});
-            this.ribbonBarGiaoVien.Location = new System.Drawing.Point(962, 0);
+            this.ribbonBarGiaoVien.Location = new System.Drawing.Point(889, 0);
             this.ribbonBarGiaoVien.Name = "ribbonBarGiaoVien";
             this.ribbonBarGiaoVien.Size = new System.Drawing.Size(153, 120);
             this.ribbonBarGiaoVien.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
@@ -217,8 +216,8 @@
             this.ribbonBar1.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnKhenThuong,
-            this.buttonItem2});
-            this.ribbonBar1.Location = new System.Drawing.Point(805, 0);
+            this.btnKyLuat});
+            this.ribbonBar1.Location = new System.Drawing.Point(732, 0);
             this.ribbonBar1.Name = "ribbonBar1";
             this.ribbonBar1.Size = new System.Drawing.Size(157, 120);
             this.ribbonBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
@@ -237,16 +236,17 @@
             this.btnKhenThuong.Tooltip = "Khen Thưởng";
             this.btnKhenThuong.Click += new System.EventHandler(this.btnKhenThuong_Click);
             // 
-            // buttonItem2
+            // btnKyLuat
             // 
-            this.buttonItem2.Image = global::QuanLyHocSinh.Properties.Resources.Ky_luat;
-            this.buttonItem2.ImagePaddingHorizontal = 8;
-            this.buttonItem2.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.buttonItem2.Name = "buttonItem2";
-            this.buttonItem2.RibbonWordWrap = false;
-            this.buttonItem2.SplitButton = true;
-            this.buttonItem2.Text = "Kỷ Luật";
-            this.buttonItem2.Tooltip = "Kỷ Luật";
+            this.btnKyLuat.Image = global::QuanLyHocSinh.Properties.Resources.Ky_luat;
+            this.btnKyLuat.ImagePaddingHorizontal = 8;
+            this.btnKyLuat.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnKyLuat.Name = "btnKyLuat";
+            this.btnKyLuat.RibbonWordWrap = false;
+            this.btnKyLuat.SplitButton = true;
+            this.btnKyLuat.Text = "Kỷ Luật";
+            this.btnKyLuat.Tooltip = "Kỷ Luật";
+            this.btnKyLuat.Click += new System.EventHandler(this.btnKyLuat_Click);
             // 
             // ribbonBarHocSinh
             // 
@@ -256,7 +256,7 @@
             this.btnHocSinh,
             this.btnPhanLop,
             this.itemContainerDanTocTonGiao});
-            this.ribbonBarHocSinh.Location = new System.Drawing.Point(565, 0);
+            this.ribbonBarHocSinh.Location = new System.Drawing.Point(492, 0);
             this.ribbonBarHocSinh.Name = "ribbonBarHocSinh";
             this.ribbonBarHocSinh.Size = new System.Drawing.Size(240, 120);
             this.ribbonBarHocSinh.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
@@ -336,11 +336,10 @@
             this.ribbonBarKetQua.Dock = System.Windows.Forms.DockStyle.Left;
             this.ribbonBarKetQua.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnKetQua,
-            this.btnHocLuc,
-            this.btnHanhKiem});
+            this.btnHocLuc});
             this.ribbonBarKetQua.Location = new System.Drawing.Point(372, 0);
             this.ribbonBarKetQua.Name = "ribbonBarKetQua";
-            this.ribbonBarKetQua.Size = new System.Drawing.Size(193, 120);
+            this.ribbonBarKetQua.Size = new System.Drawing.Size(120, 120);
             this.ribbonBarKetQua.Style = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
             this.ribbonBarKetQua.TabIndex = 4;
             this.ribbonBarKetQua.Text = "Kết Quả";
@@ -368,18 +367,6 @@
             this.btnHocLuc.Text = "Học lực";
             this.btnHocLuc.Tooltip = "Học lực";
             this.btnHocLuc.Click += new System.EventHandler(this.btnHocLuc_Click);
-            // 
-            // btnHanhKiem
-            // 
-            this.btnHanhKiem.Image = global::QuanLyHocSinh.Properties.Resources.hanh_kiem;
-            this.btnHanhKiem.ImagePaddingHorizontal = 8;
-            this.btnHanhKiem.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnHanhKiem.Name = "btnHanhKiem";
-            this.btnHanhKiem.RibbonWordWrap = false;
-            this.btnHanhKiem.SplitButton = true;
-            this.btnHanhKiem.Text = "Hạnh kiểm";
-            this.btnHanhKiem.Tooltip = "Hạnh kiểm";
-            this.btnHanhKiem.Click += new System.EventHandler(this.btnHanhKiem_Click);
             // 
             // ribbonBarMonHoc
             // 
@@ -1102,7 +1089,6 @@
         private DevComponents.DotNetBar.RibbonBar ribbonBarKQCuoiNam;
         private DevComponents.DotNetBar.TabStrip tabStrip;
         private DevComponents.DotNetBar.ButtonItem btnHocLuc;
-        private DevComponents.DotNetBar.ButtonItem btnHanhKiem;
         private DevComponents.DotNetBar.ItemContainer menuFileItems;
         private DevComponents.DotNetBar.ButtonItem btnDangNhap;
         private DevComponents.DotNetBar.ButtonItem btnDangXuat;
@@ -1129,6 +1115,6 @@
         private DevComponents.DotNetBar.ButtonItem btnPhanLop;
         private DevComponents.DotNetBar.RibbonBar ribbonBar1;
         private DevComponents.DotNetBar.ButtonItem btnKhenThuong;
-        private DevComponents.DotNetBar.ButtonItem buttonItem2;
+        private DevComponents.DotNetBar.ButtonItem btnKyLuat;
     }
 }

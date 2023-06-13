@@ -116,6 +116,12 @@
     <Compile Include="frmKetQua.Designer.cs">
       <DependentUpon>frmKetQua.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmKyLuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKyLuat.Designer.cs">
+      <DependentUpon>frmKyLuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLoaiNguoiDung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,6 +279,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmKetQua.resx">
       <DependentUpon>frmKetQua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKyLuat.resx">
+      <DependentUpon>frmKyLuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLoaiNguoiDung.resx">
       <DependentUpon>frmLoaiNguoiDung.cs</DependentUpon>

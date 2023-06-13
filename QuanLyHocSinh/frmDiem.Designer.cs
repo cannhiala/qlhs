@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBoxDanhSach = new System.Windows.Forms.GroupBox();
             this.ctxMenu = new DevComponents.DotNetBar.ContextMenuBar();
             this.btnMenu = new DevComponents.DotNetBar.ButtonItem();
@@ -41,12 +41,6 @@
             this.btnLDiem = new DevComponents.DotNetBar.ButtonItem();
             this.btnClose = new DevComponents.DotNetBar.ButtonItem();
             this.dgvDiem = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.colMaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDiemMieng = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDiem15Phut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDiem45Phut = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDiemThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigatorDiem = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -75,6 +69,12 @@
             this.label03 = new System.Windows.Forms.Label();
             this.buttonItemNhapDuLieu = new DevComponents.DotNetBar.ButtonItem();
             this.superTooltip = new DevComponents.DotNetBar.SuperTooltip();
+            this.colMaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colHoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDiemMieng = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDiem15Phut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDiem45Phut = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDiemThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxDanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ctxMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiem)).BeginInit();
@@ -91,9 +91,9 @@
             this.groupBoxDanhSach.Controls.Add(this.bindingNavigatorDiem);
             this.groupBoxDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxDanhSach.Location = new System.Drawing.Point(0, 0);
-            this.groupBoxDanhSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxDanhSach.Margin = new System.Windows.Forms.Padding(4);
             this.groupBoxDanhSach.Name = "groupBoxDanhSach";
-            this.groupBoxDanhSach.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBoxDanhSach.Padding = new System.Windows.Forms.Padding(4);
             this.groupBoxDanhSach.Size = new System.Drawing.Size(871, 665);
             this.groupBoxDanhSach.TabIndex = 3;
             this.groupBoxDanhSach.TabStop = false;
@@ -105,7 +105,7 @@
             this.ctxMenu.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnMenu});
             this.ctxMenu.Location = new System.Drawing.Point(385, 318);
-            this.ctxMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ctxMenu.Margin = new System.Windows.Forms.Padding(4);
             this.ctxMenu.Name = "ctxMenu";
             this.ctxMenu.Size = new System.Drawing.Size(100, 29);
             this.ctxMenu.Stretch = true;
@@ -158,7 +158,7 @@
             this.dgvDiem.AllowUserToDeleteRows = false;
             this.dgvDiem.AllowUserToResizeRows = false;
             this.dgvDiem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(243)))), ((int)(((byte)(250)))));
-            this.dgvDiem.ColumnHeadersHeight = 29;
+            this.dgvDiem.ColumnHeadersHeight = 50;
             this.dgvDiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvDiem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaHocSinh,
@@ -168,83 +168,23 @@
             this.colDiem45Phut,
             this.colDiemThi});
             this.ctxMenu.SetContextMenuEx(this.dgvDiem, this.btnMenu);
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDiem.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDiem.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDiem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDiem.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvDiem.Location = new System.Drawing.Point(4, 62);
-            this.dgvDiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDiem.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDiem.Name = "dgvDiem";
             this.dgvDiem.RowHeadersWidth = 51;
             this.dgvDiem.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvDiem.Size = new System.Drawing.Size(863, 599);
             this.dgvDiem.TabIndex = 5;
-            // 
-            // colMaHocSinh
-            // 
-            this.colMaHocSinh.DataPropertyName = "MaHocSinh";
-            this.colMaHocSinh.HeaderText = "Mã học sinh";
-            this.colMaHocSinh.MaxInputLength = 6;
-            this.colMaHocSinh.MinimumWidth = 6;
-            this.colMaHocSinh.Name = "colMaHocSinh";
-            this.colMaHocSinh.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colMaHocSinh.Width = 80;
-            // 
-            // colHoTen
-            // 
-            this.colHoTen.DataPropertyName = "HoTen";
-            this.colHoTen.HeaderText = "Họ và tên";
-            this.colHoTen.MaxInputLength = 30;
-            this.colHoTen.MinimumWidth = 6;
-            this.colHoTen.Name = "colHoTen";
-            this.colHoTen.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colHoTen.Width = 155;
-            // 
-            // colDiemMieng
-            // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colDiemMieng.DefaultCellStyle = dataGridViewCellStyle6;
-            this.colDiemMieng.HeaderText = "Điểm miệng";
-            this.colDiemMieng.MaxInputLength = 30;
-            this.colDiemMieng.MinimumWidth = 6;
-            this.colDiemMieng.Name = "colDiemMieng";
-            this.colDiemMieng.Width = 90;
-            // 
-            // colDiem15Phut
-            // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.colDiem15Phut.DefaultCellStyle = dataGridViewCellStyle7;
-            this.colDiem15Phut.HeaderText = "Điểm 15 phút";
-            this.colDiem15Phut.MaxInputLength = 30;
-            this.colDiem15Phut.MinimumWidth = 6;
-            this.colDiem15Phut.Name = "colDiem15Phut";
-            this.colDiem15Phut.Width = 90;
-            // 
-            // colDiem45Phut
-            // 
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Courier New", 9.75F);
-            this.colDiem45Phut.DefaultCellStyle = dataGridViewCellStyle8;
-            this.colDiem45Phut.HeaderText = "Điểm 45 phút";
-            this.colDiem45Phut.MaxInputLength = 30;
-            this.colDiem45Phut.MinimumWidth = 6;
-            this.colDiem45Phut.Name = "colDiem45Phut";
-            this.colDiem45Phut.Width = 90;
-            // 
-            // colDiemThi
-            // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colDiemThi.DefaultCellStyle = dataGridViewCellStyle9;
-            this.colDiemThi.HeaderText = "Điểm thi";
-            this.colDiemThi.MaxInputLength = 8;
-            this.colDiemThi.MinimumWidth = 6;
-            this.colDiemThi.Name = "colDiemThi";
-            this.colDiemThi.Width = 90;
             // 
             // bindingNavigatorDiem
             // 
@@ -408,7 +348,7 @@
             this.navPaneLeft.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItemNhapDuLieu});
             this.navPaneLeft.Location = new System.Drawing.Point(871, 0);
-            this.navPaneLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navPaneLeft.Margin = new System.Windows.Forms.Padding(4);
             this.navPaneLeft.Name = "navPaneLeft";
             this.navPaneLeft.NavigationBarHeight = 33;
             this.navPaneLeft.Padding = new System.Windows.Forms.Padding(1);
@@ -423,7 +363,7 @@
             this.navPaneLeft.TitlePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.navPaneLeft.TitlePanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.navPaneLeft.TitlePanel.Location = new System.Drawing.Point(1, 1);
-            this.navPaneLeft.TitlePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navPaneLeft.TitlePanel.Margin = new System.Windows.Forms.Padding(4);
             this.navPaneLeft.TitlePanel.Name = "panelTitle";
             this.navPaneLeft.TitlePanel.Size = new System.Drawing.Size(354, 30);
             this.navPaneLeft.TitlePanel.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
@@ -451,7 +391,7 @@
             this.navPanelNhapDuLieu.Controls.Add(this.label03);
             this.navPanelNhapDuLieu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.navPanelNhapDuLieu.Location = new System.Drawing.Point(1, 31);
-            this.navPanelNhapDuLieu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.navPanelNhapDuLieu.Margin = new System.Windows.Forms.Padding(4);
             this.navPanelNhapDuLieu.Name = "navPanelNhapDuLieu";
             this.navPanelNhapDuLieu.ParentItem = this.buttonItemNhapDuLieu;
             this.navPanelNhapDuLieu.Size = new System.Drawing.Size(354, 600);
@@ -469,7 +409,7 @@
             this.btnHienThiDanhSach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
             this.btnHienThiDanhSach.ColorTable = DevComponents.DotNetBar.eButtonColor.Blue;
             this.btnHienThiDanhSach.Location = new System.Drawing.Point(23, 246);
-            this.btnHienThiDanhSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHienThiDanhSach.Margin = new System.Windows.Forms.Padding(4);
             this.btnHienThiDanhSach.Name = "btnHienThiDanhSach";
             this.btnHienThiDanhSach.Size = new System.Drawing.Size(309, 28);
             this.btnHienThiDanhSach.TabIndex = 9;
@@ -513,7 +453,7 @@
             this.cmbMonHoc.FormattingEnabled = true;
             this.cmbMonHoc.ItemHeight = 14;
             this.cmbMonHoc.Location = new System.Drawing.Point(23, 197);
-            this.cmbMonHoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbMonHoc.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMonHoc.Name = "cmbMonHoc";
             this.cmbMonHoc.Size = new System.Drawing.Size(309, 20);
             this.cmbMonHoc.TabIndex = 7;
@@ -525,7 +465,7 @@
             this.cmbNamHoc.FormattingEnabled = true;
             this.cmbNamHoc.ItemHeight = 14;
             this.cmbNamHoc.Location = new System.Drawing.Point(23, 31);
-            this.cmbNamHoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbNamHoc.Margin = new System.Windows.Forms.Padding(4);
             this.cmbNamHoc.Name = "cmbNamHoc";
             this.cmbNamHoc.Size = new System.Drawing.Size(309, 20);
             this.cmbNamHoc.TabIndex = 1;
@@ -538,7 +478,7 @@
             this.cmbHocKy.FormattingEnabled = true;
             this.cmbHocKy.ItemHeight = 14;
             this.cmbHocKy.Location = new System.Drawing.Point(23, 142);
-            this.cmbHocKy.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbHocKy.Margin = new System.Windows.Forms.Padding(4);
             this.cmbHocKy.Name = "cmbHocKy";
             this.cmbHocKy.Size = new System.Drawing.Size(309, 20);
             this.cmbHocKy.TabIndex = 5;
@@ -550,7 +490,7 @@
             this.cmbLop.FormattingEnabled = true;
             this.cmbLop.ItemHeight = 14;
             this.cmbLop.Location = new System.Drawing.Point(23, 86);
-            this.cmbLop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbLop.Margin = new System.Windows.Forms.Padding(4);
             this.cmbLop.Name = "cmbLop";
             this.cmbLop.Size = new System.Drawing.Size(309, 20);
             this.cmbLop.TabIndex = 3;
@@ -580,6 +520,68 @@
             // 
             this.superTooltip.DefaultFont = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // colMaHocSinh
+            // 
+            this.colMaHocSinh.DataPropertyName = "MaHocSinh";
+            this.colMaHocSinh.HeaderText = "Mã học sinh";
+            this.colMaHocSinh.MaxInputLength = 6;
+            this.colMaHocSinh.MinimumWidth = 6;
+            this.colMaHocSinh.Name = "colMaHocSinh";
+            this.colMaHocSinh.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colMaHocSinh.Width = 80;
+            // 
+            // colHoTen
+            // 
+            this.colHoTen.DataPropertyName = "HoTen";
+            this.colHoTen.HeaderText = "Họ và tên";
+            this.colHoTen.MaxInputLength = 30;
+            this.colHoTen.MinimumWidth = 6;
+            this.colHoTen.Name = "colHoTen";
+            this.colHoTen.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colHoTen.Width = 155;
+            // 
+            // colDiemMieng
+            // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colDiemMieng.DefaultCellStyle = dataGridViewCellStyle1;
+            this.colDiemMieng.HeaderText = "Đánh giá thường xuyên 1";
+            this.colDiemMieng.MaxInputLength = 30;
+            this.colDiemMieng.MinimumWidth = 6;
+            this.colDiemMieng.Name = "colDiemMieng";
+            this.colDiemMieng.ReadOnly = true;
+            this.colDiemMieng.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colDiemMieng.Width = 95;
+            // 
+            // colDiem15Phut
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Courier New", 9.75F);
+            this.colDiem15Phut.DefaultCellStyle = dataGridViewCellStyle2;
+            this.colDiem15Phut.HeaderText = "Đánh giá thường xuyên 2";
+            this.colDiem15Phut.MaxInputLength = 30;
+            this.colDiem15Phut.MinimumWidth = 6;
+            this.colDiem15Phut.Name = "colDiem15Phut";
+            this.colDiem15Phut.Width = 95;
+            // 
+            // colDiem45Phut
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Courier New", 9.75F);
+            this.colDiem45Phut.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colDiem45Phut.HeaderText = "Điểm giữa kỳ";
+            this.colDiem45Phut.MaxInputLength = 30;
+            this.colDiem45Phut.MinimumWidth = 6;
+            this.colDiem45Phut.Name = "colDiem45Phut";
+            this.colDiem45Phut.Width = 90;
+            // 
+            // colDiemThi
+            // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Courier New", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colDiemThi.DefaultCellStyle = dataGridViewCellStyle4;
+            this.colDiemThi.HeaderText = "Điểm cuối kỳ";
+            this.colDiemThi.MaxInputLength = 8;
+            this.colDiemThi.MinimumWidth = 6;
+            this.colDiemThi.Name = "colDiemThi";
+            this.colDiemThi.Width = 90;
+            // 
             // frmDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -589,7 +591,7 @@
             this.Controls.Add(this.navPaneLeft);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDiem";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -633,12 +635,6 @@
         private System.Windows.Forms.Label label02;
         private System.Windows.Forms.Label label03;
         private System.Windows.Forms.Label label04;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMaHocSinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colHoTen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDiemMieng;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDiem15Phut;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDiem45Phut;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDiemThi;
         private System.Windows.Forms.BindingNavigator bindingNavigatorDiem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
@@ -654,5 +650,12 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator3;
         private System.Windows.Forms.ToolStripButton btnXemDiem;
         #endregion
+
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaHocSinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colHoTen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDiemMieng;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDiem15Phut;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDiem45Phut;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDiemThi;
     }
 }

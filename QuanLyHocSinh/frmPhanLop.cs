@@ -90,7 +90,7 @@ namespace QuanLyHocSinh
                 ListViewItem olditem = (ListViewItem)ie.Current;
                 ListViewItem newitem = new ListViewItem();
 
-                bool state = false;
+                /*bool state = false;
                 foreach (ListViewItem item in lvLopMoi.Items)
                 {
                     if (item.SubItems[0].Text == olditem.SubItems[0].Text)
@@ -125,7 +125,7 @@ namespace QuanLyHocSinh
                         break;
                     }
                 }
-                if (state == true) break;
+                if (state == true) break;*/
 
                 newitem.SubItems.Add(olditem.SubItems[1].Text);
                 newitem.Tag = olditem.Tag;
