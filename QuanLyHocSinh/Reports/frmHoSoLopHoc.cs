@@ -1,7 +1,9 @@
 ﻿using BUS;
 using DevComponents.DotNetBar;
+using DTO;
 using Microsoft.Reporting.WinForms;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 
@@ -38,12 +40,20 @@ namespace QuanLyHocSinh
             DataTable dataTable = LopBUS.Instance.TimTheoMa(cmbLop);
             param.Add(new ReportParameter("SiSo", dataTable.Rows[0]["SiSo"].ToString()));
 
+            IList<HocSinhDTO> iListHs = HocSinhBUS.Instance.Report(
+                   cmbNamHoc.SelectedValue.ToString(),
+                   cmbLop.SelectedValue.ToString()
+               );
+
+            if (iListHs is IList)
+            {
+                int listCount = ((IList)iListHs).Count;
+                param.Add(new ReportParameter("SoLuong", listCount.ToString()));
+            }
+
             bsHSLH.DataSource = null;
             if (cmbLop.SelectedValue != null && cmbNamHoc.SelectedValue != null)
-                bsHSLH.DataSource = HocSinhBUS.Instance.Report(
-                    cmbNamHoc.SelectedValue.ToString(),
-                    cmbLop.SelectedValue.ToString()
-                );
+                bsHSLH.DataSource = iListHs;
 
             rpvHSLH.LocalReport.SetParameters(param);
             rpvHSLH.RefreshReport();
