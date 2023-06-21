@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKyLuat));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBoxDanhSach = new System.Windows.Forms.GroupBox();
             this.ctxMenu = new DevComponents.DotNetBar.ContextMenuBar();
             this.btnMenu = new DevComponents.DotNetBar.ButtonItem();
@@ -40,10 +40,6 @@
             this.btnSave = new DevComponents.DotNetBar.ButtonItem();
             this.btnClose = new DevComponents.DotNetBar.ButtonItem();
             this.dgvKyLuat = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaNamHoc = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colMaKhoi = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.colMaLop = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.bindingNavigatorKyLuat = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -83,6 +79,13 @@
             this.txtTimKiem = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.buttonItemTimKiem = new DevComponents.DotNetBar.ButtonItem();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaNamHoc = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colMaKhoiLop = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colMaLop = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colMaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colHinhThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxDanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ctxMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKyLuat)).BeginInit();
@@ -193,17 +196,20 @@
             this.dgvKyLuat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSTT,
             this.colMaNamHoc,
-            this.colMaKhoi,
-            this.colMaLop});
+            this.colMaKhoiLop,
+            this.colMaLop,
+            this.colMaHocSinh,
+            this.colHinhThuc,
+            this.colNoiDung});
             this.ctxMenu.SetContextMenuEx(this.dgvKyLuat, this.btnMenu);
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvKyLuat.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvKyLuat.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvKyLuat.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvKyLuat.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvKyLuat.Location = new System.Drawing.Point(4, 62);
@@ -213,42 +219,6 @@
             this.dgvKyLuat.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvKyLuat.Size = new System.Drawing.Size(756, 424);
             this.dgvKyLuat.TabIndex = 5;
-            // 
-            // colSTT
-            // 
-            this.colSTT.DataPropertyName = "STT";
-            this.colSTT.HeaderText = "STT";
-            this.colSTT.MinimumWidth = 6;
-            this.colSTT.Name = "colSTT";
-            this.colSTT.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colSTT.Width = 60;
-            // 
-            // colMaNamHoc
-            // 
-            this.colMaNamHoc.DataPropertyName = "MaNamHoc";
-            this.colMaNamHoc.HeaderText = "Năm học";
-            this.colMaNamHoc.MinimumWidth = 6;
-            this.colMaNamHoc.Name = "colMaNamHoc";
-            this.colMaNamHoc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colMaNamHoc.Width = 125;
-            // 
-            // colMaKhoi
-            // 
-            this.colMaKhoi.DataPropertyName = "MaKhoi";
-            this.colMaKhoi.HeaderText = "Khối";
-            this.colMaKhoi.MinimumWidth = 6;
-            this.colMaKhoi.Name = "colMaKhoi";
-            this.colMaKhoi.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colMaKhoi.Width = 125;
-            // 
-            // colMaLop
-            // 
-            this.colMaLop.DataPropertyName = "MaLop";
-            this.colMaLop.HeaderText = "Mã lớp";
-            this.colMaLop.MinimumWidth = 6;
-            this.colMaLop.Name = "colMaLop";
-            this.colMaLop.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colMaLop.Width = 125;
             // 
             // bindingNavigatorKyLuat
             // 
@@ -729,6 +699,66 @@
             this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn1.Width = 60;
             // 
+            // colSTT
+            // 
+            this.colSTT.DataPropertyName = "STT";
+            this.colSTT.HeaderText = "STT";
+            this.colSTT.MinimumWidth = 6;
+            this.colSTT.Name = "colSTT";
+            this.colSTT.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colSTT.Width = 60;
+            // 
+            // colMaNamHoc
+            // 
+            this.colMaNamHoc.DataPropertyName = "MaNamHoc";
+            this.colMaNamHoc.HeaderText = "Năm học";
+            this.colMaNamHoc.MinimumWidth = 6;
+            this.colMaNamHoc.Name = "colMaNamHoc";
+            this.colMaNamHoc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colMaNamHoc.Width = 125;
+            // 
+            // colMaKhoiLop
+            // 
+            this.colMaKhoiLop.DataPropertyName = "MaKhoiLop";
+            this.colMaKhoiLop.HeaderText = "Khối";
+            this.colMaKhoiLop.MinimumWidth = 6;
+            this.colMaKhoiLop.Name = "colMaKhoiLop";
+            this.colMaKhoiLop.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colMaKhoiLop.Width = 125;
+            // 
+            // colMaLop
+            // 
+            this.colMaLop.DataPropertyName = "MaLop";
+            this.colMaLop.HeaderText = "Mã lớp";
+            this.colMaLop.MinimumWidth = 6;
+            this.colMaLop.Name = "colMaLop";
+            this.colMaLop.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colMaLop.Width = 125;
+            // 
+            // colMaHocSinh
+            // 
+            this.colMaHocSinh.DataPropertyName = "MaHocSinh";
+            this.colMaHocSinh.HeaderText = "Mã học sinh";
+            this.colMaHocSinh.MinimumWidth = 6;
+            this.colMaHocSinh.Name = "colMaHocSinh";
+            this.colMaHocSinh.Width = 125;
+            // 
+            // colHinhThuc
+            // 
+            this.colHinhThuc.DataPropertyName = "HinhThuc";
+            this.colHinhThuc.HeaderText = "Hình thức";
+            this.colHinhThuc.MinimumWidth = 6;
+            this.colHinhThuc.Name = "colHinhThuc";
+            this.colHinhThuc.Width = 125;
+            // 
+            // colNoiDung
+            // 
+            this.colNoiDung.DataPropertyName = "NoiDung";
+            this.colNoiDung.HeaderText = "Nội dung";
+            this.colNoiDung.MinimumWidth = 6;
+            this.colNoiDung.Name = "colNoiDung";
+            this.colNoiDung.Width = 125;
+            // 
             // frmKyLuat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -815,7 +845,10 @@
         private DevComponents.DotNetBar.Controls.TextBoxX txtHinhThuc;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSTT;
         private System.Windows.Forms.DataGridViewComboBoxColumn colMaNamHoc;
-        private System.Windows.Forms.DataGridViewComboBoxColumn colMaKhoi;
+        private System.Windows.Forms.DataGridViewComboBoxColumn colMaKhoiLop;
         private System.Windows.Forms.DataGridViewComboBoxColumn colMaLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaHocSinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colHinhThuc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNoiDung;
     }
 }

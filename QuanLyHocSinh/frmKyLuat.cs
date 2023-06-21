@@ -22,7 +22,7 @@ namespace QuanLyHocSinh
 
 
             NamHocBUS.Instance.HienThiDgvCmbCol(colMaNamHoc);
-            KhoiLopBUS.Instance.HienThiDgvCmbCol(colMaKhoi);
+            KhoiLopBUS.Instance.HienThiDgvCmbCol(colMaKhoiLop);
             LopBUS.Instance.HienThiDgvCmbCol(colMaLop);
 
             bindingNavigatorRefreshItem_Click(sender, e);
@@ -135,7 +135,8 @@ namespace QuanLyHocSinh
                     cmbLop.SelectedValue.ToString(),
                     cmbHocSinh.SelectedValue.ToString(),
                     txtHinhThuc.Text,
-                    rtbNoiDung.Text
+                    rtbNoiDung.Text,
+                    cmbKhoi.SelectedValue.ToString()
                 );
                 KyLuatBUS.Instance.ThemKyLuat(KyLuat);
                 bindingNavigatorRefreshItem_Click(sender, e);

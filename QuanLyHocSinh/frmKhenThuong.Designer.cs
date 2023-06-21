@@ -57,6 +57,7 @@
             this.bindingNavigatorExitItem = new System.Windows.Forms.ToolStripButton();
             this.navPaneLeft = new DevComponents.DotNetBar.NavigationPane();
             this.navPanelNhapDuLieu = new DevComponents.DotNetBar.NavigationPanePanel();
+            this.txtHinhThuc = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.rtbNoiDung = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbHocSinh = new DevComponents.DotNetBar.Controls.ComboBoxEx();
@@ -78,11 +79,13 @@
             this.txtTimKiem = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.buttonItemTimKiem = new DevComponents.DotNetBar.ButtonItem();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtHinhThuc = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaNamHoc = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colMaKhoi = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.colMaLop = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.colMaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colHinhThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxDanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ctxMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhenThuong)).BeginInit();
@@ -194,7 +197,10 @@
             this.colSTT,
             this.colMaNamHoc,
             this.colMaKhoi,
-            this.colMaLop});
+            this.colMaLop,
+            this.colMaHocSinh,
+            this.colHinhThuc,
+            this.colNoiDung});
             this.ctxMenu.SetContextMenuEx(this.dgvKhenThuong, this.btnMenu);
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
@@ -440,6 +446,19 @@
             this.navPanelNhapDuLieu.Style.GradientAngle = 90;
             this.navPanelNhapDuLieu.TabIndex = 1;
             // 
+            // txtHinhThuc
+            // 
+            // 
+            // 
+            // 
+            this.txtHinhThuc.Border.Class = "TextBoxBorder";
+            this.txtHinhThuc.Location = new System.Drawing.Point(13, 192);
+            this.txtHinhThuc.Margin = new System.Windows.Forms.Padding(4);
+            this.txtHinhThuc.MaxLength = 30;
+            this.txtHinhThuc.Name = "txtHinhThuc";
+            this.txtHinhThuc.Size = new System.Drawing.Size(330, 22);
+            this.txtHinhThuc.TabIndex = 18;
+            // 
             // rtbNoiDung
             // 
             this.rtbNoiDung.Location = new System.Drawing.Point(11, 250);
@@ -680,19 +699,6 @@
             this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn1.Width = 60;
             // 
-            // txtHinhThuc
-            // 
-            // 
-            // 
-            // 
-            this.txtHinhThuc.Border.Class = "TextBoxBorder";
-            this.txtHinhThuc.Location = new System.Drawing.Point(13, 192);
-            this.txtHinhThuc.Margin = new System.Windows.Forms.Padding(4);
-            this.txtHinhThuc.MaxLength = 30;
-            this.txtHinhThuc.Name = "txtHinhThuc";
-            this.txtHinhThuc.Size = new System.Drawing.Size(330, 22);
-            this.txtHinhThuc.TabIndex = 18;
-            // 
             // colSTT
             // 
             this.colSTT.DataPropertyName = "STT";
@@ -713,7 +719,7 @@
             // 
             // colMaKhoi
             // 
-            this.colMaKhoi.DataPropertyName = "MaKhoi";
+            this.colMaKhoi.DataPropertyName = "MaKhoiLop";
             this.colMaKhoi.HeaderText = "Khối";
             this.colMaKhoi.MinimumWidth = 6;
             this.colMaKhoi.Name = "colMaKhoi";
@@ -728,6 +734,30 @@
             this.colMaLop.Name = "colMaLop";
             this.colMaLop.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colMaLop.Width = 125;
+            // 
+            // colMaHocSinh
+            // 
+            this.colMaHocSinh.DataPropertyName = "MaHocSinh";
+            this.colMaHocSinh.HeaderText = "Mã học sinh";
+            this.colMaHocSinh.MinimumWidth = 6;
+            this.colMaHocSinh.Name = "colMaHocSinh";
+            this.colMaHocSinh.Width = 125;
+            // 
+            // colHinhThuc
+            // 
+            this.colHinhThuc.DataPropertyName = "HinhThuc";
+            this.colHinhThuc.HeaderText = "Hình thức";
+            this.colHinhThuc.MinimumWidth = 6;
+            this.colHinhThuc.Name = "colHinhThuc";
+            this.colHinhThuc.Width = 125;
+            // 
+            // colNoiDung
+            // 
+            this.colNoiDung.DataPropertyName = "NoiDung";
+            this.colNoiDung.HeaderText = "Nội dung";
+            this.colNoiDung.MinimumWidth = 6;
+            this.colNoiDung.Name = "colNoiDung";
+            this.colNoiDung.Width = 170;
             // 
             // frmKhenThuong
             // 
@@ -805,17 +835,20 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorExitItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorRefreshItem;
         #endregion
-        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbKhoi;
-        private System.Windows.Forms.Label label1;
         private DevComponents.DotNetBar.Controls.ComboBoxEx cmbHocSinh;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.RichTextBox rtbNoiDung;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DevComponents.DotNetBar.Controls.TextBoxX txtHinhThuc;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbKhoi;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSTT;
         private System.Windows.Forms.DataGridViewComboBoxColumn colMaNamHoc;
         private System.Windows.Forms.DataGridViewComboBoxColumn colMaKhoi;
         private System.Windows.Forms.DataGridViewComboBoxColumn colMaLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaHocSinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colHinhThuc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNoiDung;
     }
 }

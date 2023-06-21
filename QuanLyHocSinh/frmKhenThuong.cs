@@ -135,7 +135,8 @@ namespace QuanLyHocSinh
                     cmbLop.SelectedValue.ToString(),
                     cmbHocSinh.SelectedValue.ToString(),
                     txtHinhThuc.Text,
-                    rtbNoiDung.Text
+                    rtbNoiDung.Text,
+                    cmbKhoi.SelectedValue.ToString()
                 );
                 KhenThuongBUS.Instance.ThemKhenThuong(khenThuong);
                 bindingNavigatorRefreshItem_Click(sender, e);
