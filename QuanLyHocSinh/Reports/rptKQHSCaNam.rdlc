@@ -228,9 +228,6 @@
                   <Width>3.10418cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.07772cm</Width>
-                </TablixColumn>
-                <TablixColumn>
                   <Width>3.0248cm</Width>
                 </TablixColumn>
               </TablixColumns>
@@ -479,43 +476,6 @@
                             </Paragraph>
                           </Paragraphs>
                           <ZIndex>9</ZIndex>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                            </Border>
-                            <FontFamily />
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>1pt</PaddingLeft>
-                            <PaddingRight>1pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
-                        <Textbox Name="textbox10">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>HẠNH KIỂM</Value>
-                                  <Style>
-                                    <FontFamily />
-                                    <FontWeight>Bold</FontWeight>
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <FontFamily />
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <ZIndex>8</ZIndex>
                           <Style>
                             <Border>
                               <Style>Solid</Style>
@@ -823,42 +783,6 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="HanhKiem">
-                          <CanGrow>true</CanGrow>
-                          <KeepTogether>true</KeepTogether>
-                          <Paragraphs>
-                            <Paragraph>
-                              <TextRuns>
-                                <TextRun>
-                                  <Value>=Fields!TenHanhKiem.Value</Value>
-                                  <Style>
-                                    <FontFamily />
-                                  </Style>
-                                </TextRun>
-                              </TextRuns>
-                              <Style>
-                                <FontFamily />
-                                <TextAlign>Center</TextAlign>
-                              </Style>
-                            </Paragraph>
-                          </Paragraphs>
-                          <ZIndex>1</ZIndex>
-                          <Style>
-                            <Border>
-                              <Style>Solid</Style>
-                            </Border>
-                            <FontFamily />
-                            <VerticalAlign>Middle</VerticalAlign>
-                            <PaddingLeft>3pt</PaddingLeft>
-                            <PaddingRight>2pt</PaddingRight>
-                            <PaddingTop>2pt</PaddingTop>
-                            <PaddingBottom>2pt</PaddingBottom>
-                          </Style>
-                        </Textbox>
-                      </CellContents>
-                    </TablixCell>
-                    <TablixCell>
-                      <CellContents>
                         <Textbox Name="TenKetQua">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -907,7 +831,6 @@
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
-                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -934,7 +857,7 @@
             <Top>1.51158in</Top>
             <Left>0.026cm</Left>
             <Height>0.5in</Height>
-            <Width>27.78305cm</Width>
+            <Width>24.70533cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>

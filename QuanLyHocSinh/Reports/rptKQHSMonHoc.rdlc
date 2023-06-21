@@ -411,7 +411,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>TBKT MIỆNG</Value>
+                                  <Value>ĐIỂM THƯỜNG XUYÊN 2</Value>
                                   <Style>
                                     <FontFamily />
                                     <FontWeight>Bold</FontWeight>
@@ -446,7 +446,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>TBKT 15 PHÚT</Value>
+                                  <Value>ĐIỂM THƯỜNG XUYÊN 2</Value>
                                   <Style>
                                     <FontFamily />
                                     <FontWeight>Bold</FontWeight>
@@ -481,7 +481,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>TBKT 45 PHÚT</Value>
+                                  <Value>ĐIỂM GIỮA KỲ</Value>
                                   <Style>
                                     <FontFamily />
                                     <FontWeight>Bold</FontWeight>
@@ -516,7 +516,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>ĐIỂM THI</Value>
+                                  <Value>ĐIỂM CUỐI KỲ</Value>
                                   <Style>
                                     <FontFamily />
                                     <FontWeight>Bold</FontWeight>
@@ -620,7 +620,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -658,7 +657,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
