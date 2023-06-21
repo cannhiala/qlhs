@@ -37,20 +37,20 @@ namespace BUS
             bindingNavigator.BindingSource = bindingSource;
             dataGridViewX.DataSource = bindingSource;
 
-            hinhThuc.DataBindings.Clear();
-            hinhThuc.DataBindings.Add("Text", bindingSource, "STT");
-
             cmbNamHoc.DataBindings.Clear();
             cmbNamHoc.DataBindings.Add("SelectedValue", bindingSource, "MaNamHoc");
 
             cmbLop.DataBindings.Clear();
             cmbLop.DataBindings.Add("SelectedValue", bindingSource, "MaLop");
 
-            /*cmbKhoi.DataBindings.Clear();
-            cmbKhoi.DataBindings.Add("SelectedValue", bindingSource, "MaKhoi");*/
+            cmbKhoi.DataBindings.Clear();
+            cmbKhoi.DataBindings.Add("SelectedValue", bindingSource, "MaKhoiLop");
 
             cmbHocSinh.DataBindings.Clear();
             cmbHocSinh.DataBindings.Add("SelectedValue", bindingSource, "MaHocSinh");
+
+            hinhThuc.DataBindings.Clear();
+            hinhThuc.DataBindings.Add("Text", bindingSource, "HinhThuc");
 
             noiDung.DataBindings.Clear();
             noiDung.DataBindings.Add("Text", bindingSource, "NoiDung");
