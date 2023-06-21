@@ -32,9 +32,9 @@ namespace DAO
 
         public void ThemKyLuat(KyLuatDTO KyLuat)
         {
-            string query = "EXEC ThemKyLuat @maNamHoc , @maLop , @maHocSinh , @hinhThuc , @noiDung";
+            string query = "EXEC ThemKyLuat @maNamHoc , @maLop , @maHocSinh , @hinhThuc , @noiDung , @maKhoiLop";
             object[] parameters = new object[] {
-                KyLuat.MaNamHoc, KyLuat.MaLop, KyLuat.MaHocSinh, KyLuat.HinhThuc, KyLuat.NoiDung
+                KyLuat.MaNamHoc, KyLuat.MaLop, KyLuat.MaHocSinh, KyLuat.HinhThuc, KyLuat.NoiDung, KyLuat.MaKhoiLop
             };
             DataProvider.Instance.ExecuteNonQuery(query, parameters);
         }

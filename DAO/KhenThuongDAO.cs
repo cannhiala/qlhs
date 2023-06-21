@@ -32,9 +32,9 @@ namespace DAO
 
         public void ThemKhenThuong(KhenThuongDTO KhenThuong)
         {
-            string query = "EXEC ThemKhenThuong @maNamHoc , @maLop , @maHocSinh , @hinhThuc , @noiDung";
+            string query = "EXEC ThemKhenThuong @maNamHoc , @maLop , @maHocSinh , @hinhThuc , @noiDung , @maKhoiLop";
             object[] parameters = new object[] {
-                KhenThuong.MaNamHoc, KhenThuong.MaLop, KhenThuong.MaHocSinh, KhenThuong.HinhThuc, KhenThuong.NoiDung
+                KhenThuong.MaNamHoc, KhenThuong.MaLop, KhenThuong.MaHocSinh, KhenThuong.HinhThuc, KhenThuong.NoiDung, KhenThuong.MaKhoiLop
             };
             DataProvider.Instance.ExecuteNonQuery(query, parameters);
         }

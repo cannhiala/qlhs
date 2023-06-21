@@ -9,7 +9,7 @@ namespace DAO
     public class DataProvider
     {
         private static DataProvider instance;
-        //private string connectionString = "Data Source=(local); Initial Catalog=QuanLyHocSinh; Integrated Security=True";
+        //private string connectionString = "Data Source=DESKTOP-1JRJ0HT\\CANTVDB;Initial Catalog=ql_hocsinh;Persist Security Info=True;User ID=sa;Password=123456";
 
         private string connectionString = @"
             Server=tcp:qlhs.database.windows.net,1433;
@@ -23,7 +23,7 @@ namespace DAO
             Connection Timeout=30;
          ";
 
-    private DataProvider() { }
+        private DataProvider() { }
 
         public static DataProvider Instance
         {
